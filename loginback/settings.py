@@ -117,6 +117,24 @@ REST_FRAMEWORK = {
 
     ),
 }
+#this part is for logining from google
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'APP': {
+            'client_id': "246322974788-vao3rqf7tkft96r4p02speg49ovah837.apps.googleusercontent.com",
+            'secret': "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",
+            'key': ''
+        },
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        },
+        'OAUTH_PKCE_ENABLED': True,
+    }
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
